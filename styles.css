@@ -170,6 +170,22 @@ svg{
     width: 30px;
 }
 
+/* Header logo and main title sizing */
+header #icono img{
+    width: 50px;
+    height: auto;
+}
+
+header #icono h1{
+    font-size: 1.6rem;
+    margin-left: 10px;
+    color: white;
+}
+
+.svg h4{
+    font-size: 1rem;
+}
+
 
 .svg{
     justify-content: left;
@@ -210,7 +226,7 @@ footer{
 .footer-col h3,
 .footer-col h4 {
     margin-bottom: 12px;
-    color: #d7f6ec;
+    color: white;
 }
 .footer-col p {
     line-height: 1.8;
@@ -264,7 +280,57 @@ footer{
 
 @media (max-width: 800px) {
     aside{
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    aside li a{
+        width: 100%;
+    }
+    /* Reduce main/title sizes */
+    header {
+        padding: 12px 16px;
+    }
+    header #icono img{
+        width: 36px;
+    }
+    header #icono h1{
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+    /* Make svgs and icons smaller */
+    svg{
+        width: 20px;
+    }
+    .svg h4{
+        font-size: 0.95rem;
+    }
+    /* Tidy up buttons and nav links on small screens */
+    header nav a{
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+    button{
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+    /* Reduce card padding so content fits better */
+    article{
+        padding: 15px;
     }
     body > div {
         display: flex;
@@ -274,8 +340,17 @@ footer{
     footer{
         flex-direction: column;
         justify-content: center;
+        align-items: left;
+        
+    }
+    footer section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
+        width: 100%;
+        text-align: center;
+        
     }
     .footer-bottom {
         flex-direction: column;
