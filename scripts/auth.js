@@ -22,13 +22,13 @@ if (loginForm) {
             return;
         }
         
-       
+        
         console.log('Login:', { email, password });
         showAlert('Iniciando sesión...', 'success');
         
    
         setTimeout(() => {
-            window.location.href = '../root/dashboard.html';
+            window.location.href = 'dashboard.html';
         }, 1500);
     });
 }
@@ -42,8 +42,6 @@ if (registerForm) {
         const firstName = document.getElementById('firstName').value.trim();
         const lastName = document.getElementById('lastName').value.trim();
         const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const company = document.getElementById('company').value.trim();
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
         const terms = document.querySelector('input[name="terms"]').checked;
@@ -86,8 +84,6 @@ if (registerForm) {
             firstName, 
             lastName, 
             email, 
-            phone, 
-            company, 
             password 
         });
         
@@ -95,7 +91,7 @@ if (registerForm) {
         
         // Redirigir después de 2 segundos
         setTimeout(() => {
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }, 2000);
     });
 }
