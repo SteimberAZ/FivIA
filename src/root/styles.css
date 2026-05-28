@@ -15,6 +15,9 @@ body {
     min-height: 100vh;
 }
 header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -134,11 +137,20 @@ body > div {
     min-height: 80vh;
 }
 
+#arrow{
+    border-radius: 999px;
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.3);
+   
+}
+
 header nav a:hover{
     background: rgba(255,255,255,0.18);
     border-color: rgba(255,255,255,0.6);
     color: #ffffff;
 }
+
 #salir:hover{
   
     border-top: red 3px solid;
@@ -277,7 +289,19 @@ footer{
 .footer-bottom a:hover {
     text-decoration: underline;
 }
-
+#typed{
+    height: 40px;
+}
+#welcome{
+    display: flex;
+    flex-direction: row;
+    gap: 5px; 
+}
+#arrow{
+    transition: 0.3s ease;
+    display: none;
+    width: 25px;
+}
 @media (max-width: 800px) {
     aside{
         display: flex;
@@ -287,13 +311,29 @@ footer{
         align-items: center;
         text-align: center;
     }
+    #welcome{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #menul{
+        display: none;
+      
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #arrow{
+        transition: 0.3s ease;
+        display: flex;
+        width: 40px;
+    }
     aside li a{
         width: 100%;
     }
-    /* Reduce main/title sizes */
-    header {
-        padding: 12px 16px;
-    }
+  
     header #icono img{
         width: 36px;
     }
@@ -318,7 +358,7 @@ footer{
     .svg h4{
         font-size: 0.95rem;
     }
-    /* Tidy up buttons and nav links on small screens */
+ 
     header nav a{
         padding: 6px 10px;
         font-size: 0.9rem;
@@ -328,10 +368,7 @@ footer{
         padding: 8px 10px;
         font-size: 0.95rem;
     }
-    /* Reduce card padding so content fits better */
-    article{
-        padding: 15px;
-    }
+   
     body > div {
         display: flex;
         flex-direction: column;
