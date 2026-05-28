@@ -33,3 +33,9 @@ arrow.addEventListener("click", () => {
         arrow.style.transform = "rotate(180deg)";
     }
 });
+
+
+    window.addEventListener("hashchange", function() {
+    scrollBy(0, -55);
+});
+
