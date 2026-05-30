@@ -35,7 +35,5 @@ arrow.addEventListener("click", () => {
 });
 
 
-    window.addEventListener("hashchange", function() {
-    scrollBy(0, -55);
-});
+   
 

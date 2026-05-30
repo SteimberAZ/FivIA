@@ -256,7 +256,7 @@ body {
     text-decoration: underline;
 }
 
-/* BUTTONS */
+
 .btn-login,
 .btn-register {
     padding: 14px 24px;
@@ -451,19 +451,6 @@ body {
         padding: 20px 15px;
     }
 
-    .info-card {
-        padding: 20px;
-    }
-
-    .info-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .auth-footer {
-        padding: 15px 20px;
-        font-size: 0.85rem;
-    }
-
     .footer-links {
         flex-direction: column;
         gap: 8px;
@@ -506,15 +493,4 @@ body {
         font-size: 0.9rem;
     }
 
-    .info-card {
-        padding: 15px;
-    }
-
-    .info-card h3 {
-        font-size: 1rem;
-    }
-
-    .info-card p {
-        font-size: 0.9rem;
-    }
 }
