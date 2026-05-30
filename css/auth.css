@@ -355,7 +355,7 @@ body {
     color: black;
 }
 
-/* FOOTER */
+
 .auth-footer {
    
     background: var(--header-gradient);
@@ -387,7 +387,7 @@ body {
     color: var(--white);
 }
 
-/* RESPONSIVE DESIGN */
+
 @media (max-width: 900px) {
     .info-card {
     display: none;
