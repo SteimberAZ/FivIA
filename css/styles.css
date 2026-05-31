@@ -182,7 +182,7 @@ svg{
     width: 30px;
 }
 
-/* Header logo and main title sizing */
+
 header #icono img{
     width: 50px;
     height: auto;
@@ -352,7 +352,7 @@ footer{
     h4 {
         font-size: 1rem;
     }
-    /* Make svgs and icons smaller */
+  
     svg{
         width: 20px;
     }

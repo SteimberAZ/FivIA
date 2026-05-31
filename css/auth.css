@@ -2,10 +2,10 @@
     --bg-principal: #249b81;
     --bg-secundario: #f4f6f8;
     --sombra: rgba(0, 0, 0, 0.4);
-    --header-gradient: linear-gradient(135deg, rgba(14,78,60,0.95), rgba(29,128,104,0.98));
+    --header-gradient: linear-gradient(135deg, rgba(14, 78, 60, 0.95), rgba(29, 128, 104, 0.98));
     --text-light: #d8f0e8;
     --text-primary: #249b81;
-    --border-light: rgba(216,240,232,0.3);
+    --border-light: rgba(216, 240, 232, 0.3);
     --white: #ffffff;
     --error: #ff6b6b;
     --success: #51cf66;
@@ -19,24 +19,24 @@
 }
 
 body {
-    background:white;
+    background: white;
     color: #333;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding:  0;
+    padding: 0;
 }
 
 .auth-container {
-    width:100vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     height: 100vh;
     padding: 0px;
     margin: 0;
-  
+
 }
 
 
@@ -49,7 +49,7 @@ body {
     box-shadow: 0 4px 10px var(--sombra);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
-   
+
 }
 
 .logo-section {
@@ -73,9 +73,12 @@ body {
 }
 
 @keyframes pulse-ring {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
@@ -87,7 +90,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
-   
+
 }
 
 .form-wrapper {
@@ -114,6 +117,7 @@ body {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -318,6 +322,7 @@ body {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -325,7 +330,7 @@ body {
 }
 
 .info-card {
-    background:rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 12px;
@@ -338,7 +343,7 @@ body {
 .info-card:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-5px);
-   
+
 }
 
 .info-card h3 {
@@ -357,14 +362,14 @@ body {
 
 
 .auth-footer {
-   
+
     background: var(--header-gradient);
     padding: 20px 30px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
-   
+
     width: 100%;
     bottom: 0;
 }
@@ -390,8 +395,9 @@ body {
 
 @media (max-width: 900px) {
     .info-card {
-    display: none;
+        display: none;
     }
+
     .form-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -410,6 +416,7 @@ body {
         grid-column: 1;
         order: -1;
     }
+
     .auth-main {
         flex: 1;
         display: flex;
@@ -417,7 +424,7 @@ body {
         justify-content: center;
         padding: 40px 20px;
         margin-top: 80px;
-        
+
     }
 
 }
