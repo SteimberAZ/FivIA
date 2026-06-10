@@ -9,6 +9,46 @@
     --white: #ffffff;
     --error: #ff6b6b;
     --success: #51cf66;
+    --body-bg: #ffffff;
+    --body-text: #333333;
+    --form-bg: #ffffff;
+    --form-text: #333333;
+    --input-bg: #fafafa;
+    --input-text: #333333;
+    --input-border: #e0e0e0;
+    --input-focus: rgba(36, 155, 129, 0.1);
+    --info-card-bg: rgba(255, 255, 255, 0.15);
+    --info-card-border: rgba(255, 255, 255, 0.2);
+    --info-card-heading: #000000;
+    --info-card-text: #000000;
+    --footer-text: rgba(51, 51, 51, 0.8);
+    --footer-link: #249b81;
+    --form-footer-text: #666666;
+    --link-hover: rgba(36, 155, 129, 0.8);
+    --button-shadow: rgba(36, 155, 129, 0.3);
+    --button-shadow-hover: rgba(36, 155, 129, 0.4);
+}
+
+body.dark-mode {
+    --body-bg: #0f1318;
+    --body-text: #e8f6f2;
+    --form-bg: #19232d;
+    --form-text: #f4f6f8;
+    --input-bg: #141e26;
+    --input-text: #f4f6f8;
+    --input-border: rgba(255, 255, 255, 0.12);
+    --input-focus: rgba(36, 155, 129, 0.25);
+    --info-card-bg: rgba(255, 255, 255, 0.08);
+    --info-card-border: rgba(255, 255, 255, 0.12);
+    --info-card-heading: #f4f6f8;
+    --info-card-text: #d8f0e8;
+    --footer-text: rgba(255, 255, 255, 0.8);
+    --footer-link: #d8f0e8;
+    --form-footer-text: #d0d8e0;
+    --link-hover: rgba(36, 155, 129, 0.8);
+    --button-shadow: rgba(36, 155, 129, 0.25);
+    --button-shadow-hover: rgba(36, 155, 129, 0.35);
+    --header-gradient: linear-gradient(135deg, rgba(6, 38, 34, 0.95), rgba(15, 75, 62, 0.98));
 }
 
 * {
@@ -19,8 +59,8 @@
 }
 
 body {
-    background: white;
-    color: #333;
+    background: var(--body-bg);
+    color: var(--body-text);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -104,7 +144,8 @@ body {
 }
 
 .form-card {
-    background: var(--white);
+    background: var(--form-bg);
+    color: var(--form-text);
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
@@ -137,7 +178,7 @@ body {
 }
 
 .form-header p {
-    color: #666;
+    color: var(--form-footer-text);
     font-size: 0.95rem;
 }
 
@@ -173,18 +214,19 @@ body {
 
 .form-group input {
     padding: 12px 15px;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--input-border);
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: #fafafa;
+    background: var(--input-bg);
+    color: var(--input-text);
 }
 
 .form-group input:focus {
     outline: none;
     border-color: var(--text-primary);
-    background: var(--white);
-    box-shadow: 0 0 0 4px rgba(36, 155, 129, 0.1);
+    background: var(--input-bg);
+    box-shadow: 0 0 0 4px var(--input-focus);
 }
 
 .form-group input::placeholder {
@@ -211,7 +253,7 @@ body {
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    color: #666;
+    color: var(--form-footer-text);
 }
 
 .remember-me input[type="checkbox"] {
@@ -237,7 +279,7 @@ body {
     align-items: flex-start;
     gap: 10px;
     cursor: pointer;
-    color: #666;
+    color: var(--form-footer-text);
     line-height: 1.5;
 }
 
@@ -292,7 +334,7 @@ body {
 .form-footer {
     text-align: center;
     margin-top: 20px;
-    color: #666;
+    color: var(--form-footer-text);
     font-size: 0.95rem;
 }
 
@@ -330,18 +372,18 @@ body {
 }
 
 .info-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--info-card-bg);
     backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--white);
+    border: 1px solid var(--info-card-border);
+    color: var(--info-card-text);
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .info-card:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--info-card-bg);
     transform: translateY(-5px);
 
 }
@@ -350,26 +392,24 @@ body {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: 600;
-    color: black;
+    color: var(--info-card-heading);
 }
 
 .info-card p {
     font-size: 0.95rem;
     line-height: 1.6;
     opacity: 0.95;
-    color: black;
+    color: var(--info-card-text);
 }
 
 
 .auth-footer {
-
     background: var(--header-gradient);
     padding: 20px 30px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--footer-text);
     font-size: 0.9rem;
-
     width: 100%;
     bottom: 0;
 }
@@ -382,7 +422,7 @@ body {
 }
 
 .footer-links a {
-    color: var(--text-light);
+    color: var(--footer-link);
     text-decoration: none;
     transition: 0.3s ease;
 }
